@@ -1,4 +1,4 @@
-/**
+ /**
  * StringSpeed - STARTER (stretch task)
  * Question: does building a String with += cost more time than StringBuilder?
  * Run it, record both times, and explain the difference in one sentence.
@@ -6,7 +6,7 @@
 public class StringSpeed {
 
     public static void main(String[] args) {
-        int n = 20000;
+        int n = 200000;
 
         // 1. Build a long String with += (given)
         long start = System.nanoTime();
@@ -20,7 +20,11 @@ public class StringSpeed {
         //    StringBuilder sb = new StringBuilder();  then  sb.append("t");
         //    At the end: String t = sb.toString();
         start = System.nanoTime();
-        String t = "";
+        StringBuilder sb = new StringBuilder();
+        // for (int i = 0; i<n; i++){
+        // sb.append("t");
+        // }
+        String t = sb.toString();
         long builderTime = System.nanoTime() - start;
 
         System.out.println("Same text? " + s.equals(t));
