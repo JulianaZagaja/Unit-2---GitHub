@@ -4,13 +4,13 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 
-public class simpleServer2 {
+public class SimpleServer2 {
     private ServerSocket serverSocket;
     private Socket socket;
     private Scanner in;
     private PrintWriter out;
 
-    public simpleServer2(int port) throws Exception{
+    public SimpleServer2(int port) throws Exception{
         serverSocket = new ServerSocket(port);
         // socket=serverSocket.accept();
          
@@ -37,7 +37,7 @@ public class simpleServer2 {
 public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     try{
-        simpleServer2 server = new simpleServer2(9090);
+        SimpleServer2 server = new SimpleServer2(9090);
         server.acceptClient();
         while(true){
             String message = input.nextLine();
