@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SimpleServer",
+            "request": "launch",
+            "mainClass": "SimpleServer",
+            "projectName": "Unit-2---GitHub_2f0505ea"
+        },
+        {
+            "type": "java",
             "name": "SimpleClient2",
             "request": "launch",
             "mainClass": "SimpleClient2",
